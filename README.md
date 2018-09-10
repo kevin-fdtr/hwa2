@@ -27,7 +27,7 @@ The response body will include the accepted user object with an id field used fo
     }
 
 ### PUT /users
-Updates a user based on JSON object in the request body. The id identifies the user to update. All fields but the id may be modified.
+Updates a user based on JSON object in the request body. The token identifies the user to update. All fields but the id may be modified.
 
 A valid token for the user must be in the request Header.
 
@@ -36,7 +36,6 @@ A valid token for the user must be in the request Header.
 
     <b>Body:</b>
     {
-        "id": "a1b2c3d4e5f6g7h8i9j0",
         "firstName": "Kevin",
         "lastName": "Sorensen",
         "emailAddress": "someone@email.com",
