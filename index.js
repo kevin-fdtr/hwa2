@@ -3,7 +3,11 @@
  * 
  */
 
-// === Node depenendencies 
+/**** DEPENDENCIES ****/
+// nodeJS 
+
+// Local
+config = require('./lib/config');
 
 // container
 const hwa2 = {}
@@ -11,9 +15,8 @@ const hwa2 = {}
 // Local dependencies
 hwa2.server = require('./lib/server.js');
 
-
 // init servers
-server.init();
+server.init(config.server);
 
 // Exports
 module.exports = hwa2;
