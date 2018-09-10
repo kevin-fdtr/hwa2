@@ -7,13 +7,16 @@
 // nodeJS 
 
 // Local
-config = require('./lib/config');
+const config = require('./lib/config');
+const helpers = require('./lib/helpers');
+const server = require('./lib/server.js');
 
 // container
 const hwa2 = {}
 
-// Local dependencies
-hwa2.server = require('./lib/server.js');
+hwa2.server = server;
+
+helpers.log.info(1, `Environment: ${config.envName}`);
 
 // init servers
 server.init(config.server);
