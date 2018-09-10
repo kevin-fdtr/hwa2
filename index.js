@@ -16,8 +16,6 @@ const hwa2 = {}
 
 hwa2.server = server;
 
-helpers.log.info(1, `Environment: ${config.envName}`);
-
 // init servers
 server.init(config.server);
 
