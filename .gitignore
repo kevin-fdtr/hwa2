@@ -1,2 +1,3 @@
-.data/users
+.data/*
+!.data/api
 lib/template.js
