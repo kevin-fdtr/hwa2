@@ -1,0 +1,81 @@
+{
+    "url": "/users",
+    "methods": [
+        {
+            "method": "get",
+            "name": "get a user's properties",
+            "headerKeyParameters": ["token"],
+            "queryParameters": ["id"]
+        },
+        {
+            "method": "post",
+            "name": "add a user",
+            "headerKeyParameters": [],
+            "queryParameters": ["id"],
+            "requiredBodyData": [
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "emailAddress",
+                    "type": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "type": "string"
+                }
+            ],
+            "optionalBodyData": [{}],
+            "responseBody": [
+                {
+                    "name": "id",
+                    "type": "string"
+                },                    {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "emailAddress",
+                    "type": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "method": "put",
+            "name": "update a user",
+            "headerKeyParameters": ["token"],
+            "queryParameters": [],
+            "requiredBodyData": [
+                {
+                    "name": "id",
+                    "type": "string"
+                }
+            ],
+            "optionalBodyData": [
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "emailAddress",
+                    "type": "string"
+                },
+                {
+                    "name": "streetAddress",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "method": "delete",
+            "name": "delete a user",
+            "headerKeyParameters": ["token"],
+            "queryParameters": ["id"]
+        }
+    ]
+}

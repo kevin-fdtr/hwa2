@@ -1,0 +1,11 @@
+{
+    "url": "/api",
+    "methods": [
+        {
+            "method": "get",
+            "name": "api endpoint list",
+            "headerKeyParameters": [],
+            "queryParameters": []
+        }
+    ]
+}
