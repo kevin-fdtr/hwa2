@@ -4,14 +4,14 @@
         {
             "method": "get",
             "name": "get a user's properties",
-            "headerKeyParameters": ["token"],
+            "requiredHeaderParameters": ["token"],
             "queryParameters": ["id"]
         },
         {
             "method": "post",
             "name": "add a user",
-            "headerKeyParameters": [],
-            "queryParameters": ["id"],
+            "requiredHeaderParameters": [],
+            "queryParameters": [],
             "requiredBodyData": [
                 {
                     "name": "name",
@@ -19,6 +19,10 @@
                 },
                 {
                     "name": "emailAddress",
+                    "type": "string"
+                },
+                {
+                    "name": "password",
                     "type": "string"
                 },
                 {
@@ -26,12 +30,14 @@
                     "type": "string"
                 }
             ],
-            "optionalBodyData": [{}],
+            "optionalBodyData": [
+                {
+                    "name": "allergies",
+                    "type": "string"
+                }                
+            ],
             "responseBody": [
                 {
-                    "name": "id",
-                    "type": "string"
-                },                    {
                     "name": "name",
                     "type": "string"
                 },
@@ -42,17 +48,21 @@
                 {
                     "name": "streetAddress",
                     "type": "string"
-                }
+                },
+                {
+                    "name": "allergies",
+                    "type": "string"
+                }                
             ]
         },
         {
             "method": "put",
             "name": "update a user",
-            "headerKeyParameters": ["token"],
+            "requiredHeaderParameters": ["token"],
             "queryParameters": [],
             "requiredBodyData": [
                 {
-                    "name": "id",
+                    "name": "emailAddress",
                     "type": "string"
                 }
             ],
@@ -62,19 +72,37 @@
                     "type": "string"
                 },
                 {
+                    "name": "streetAddress",
+                    "type": "string"
+                },
+                {
+                    "name": "allergies",
+                    "type": "string"
+                }   
+            ],            
+            "responseBody": [
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
                     "name": "emailAddress",
                     "type": "string"
                 },
                 {
                     "name": "streetAddress",
                     "type": "string"
-                }
-            ]
+                },
+                {
+                    "name": "allergies",
+                    "type": "string"
+                }      
+            ]          
         },
         {
             "method": "delete",
             "name": "delete a user",
-            "headerKeyParameters": ["token"],
+            "requiredHeaderParameters": ["token"],
             "queryParameters": ["id"]
         }
     ]
