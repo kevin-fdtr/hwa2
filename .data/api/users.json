@@ -5,13 +5,31 @@
             "method": "get",
             "name": "get a user's properties",
             "requiredHeaderParameters": ["token"],
-            "queryParameters": ["id"]
-        },
+            "requiredQueryParameters": ["emailAddress"],
+            "responseBody": [
+              {
+                  "name": "name",
+                  "type": "string"
+              },
+              {
+                  "name": "emailAddress",
+                  "type": "string"
+              },
+              {
+                  "name": "streetAddress",
+                  "type": "string"
+              },
+              {
+                  "name": "allergies",
+                  "type": "string"
+              }                
+          ]
+      },
         {
             "method": "post",
             "name": "add a user",
             "requiredHeaderParameters": [],
-            "queryParameters": [],
+            "requiredQueryParameters": [],
             "requiredBodyData": [
                 {
                     "name": "name",
@@ -59,7 +77,7 @@
             "method": "put",
             "name": "update a user",
             "requiredHeaderParameters": ["token"],
-            "queryParameters": [],
+            "requiredQueryParameters": [],
             "requiredBodyData": [
                 {
                     "name": "emailAddress",
@@ -103,7 +121,7 @@
             "method": "delete",
             "name": "delete a user",
             "requiredHeaderParameters": ["token"],
-            "queryParameters": ["id"]
+            "requiredQueryParameters": ["emailAddress"]
         }
     ]
 }
