@@ -121,7 +121,25 @@
             "method": "delete",
             "name": "delete a user",
             "requiredHeaderParameters": ["token"],
-            "requiredQueryParameters": ["emailAddress"]
+            "requiredQueryParameters": ["emailAddress"],
+            "responseBody": [
+              {
+                  "name": "name",
+                  "type": "string"
+              },
+              {
+                  "name": "emailAddress",
+                  "type": "string"
+              },
+              {
+                  "name": "streetAddress",
+                  "type": "string"
+              },
+              {
+                  "name": "allergies",
+                  "type": "string"
+              }      
+          ]          
         }
     ]
 }
