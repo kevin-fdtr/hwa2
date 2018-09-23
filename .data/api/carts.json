@@ -1,0 +1,65 @@
+{
+  "url": "/carts",
+  "methods": [
+    {
+      "method": "get",
+      "name": "list items in a cart",
+      "requiredHeaderParameters": ["token"],
+      "requiredQueryParameters": ["emailAddress"],
+      "requiredBodyData": [],
+      "responseBody": {
+        "items": [
+          {
+            "name": "id",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "method": "post",
+      "name": "add menu item(s) to cart",
+      "requiredHeaderParameters": ["token"],
+      "requiredQueryParameters": ["emailAddress"],
+      "requiredBodyData": {
+        "items": [
+          {
+              "name": "id",
+              "type": "string"
+          }
+        ]
+      },
+      "optionalBodyData": [],
+      "responseBody": {
+        "addedItems": [
+          {
+              "name": "id",
+              "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "method": "delete",
+      "name": "remove item(s) from a cart",
+      "requiredHeaderParameters": ["token"],
+      "requiredQueryParameters": ["emailAddress"],
+      "requiredBodyData": {
+        "items": [
+          {
+              "name": "id",
+              "type": "string"
+          }
+        ]
+      },
+      "responseBody": {
+        "deletedItems": [
+          {
+              "name": "id",
+              "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
