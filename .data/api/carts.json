@@ -12,29 +12,41 @@
           {
             "name": "id",
             "type": "string"
+          },          
+          {
+            "name": "quantity",
+            "type": "number"
           }
         ]
       }
     },
     {
       "method": "post",
-      "name": "add menu item(s) to cart",
+      "name": "create cart with items or replace items in cart",
       "requiredHeaderParameters": ["token"],
       "requiredQueryParameters": ["emailAddress"],
       "requiredBodyData": {
         "items": [
           {
-              "name": "id",
-              "type": "string"
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "quantity",
+            "type": "number"
           }
         ]
       },
       "optionalBodyData": [],
       "responseBody": {
-        "addedItems": [
+        "items": [
           {
               "name": "id",
               "type": "string"
+          },
+          {
+            "name": "quantity",
+            "type": "number"
           }
         ]
       }

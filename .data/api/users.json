@@ -6,6 +6,7 @@
             "name": "get a user's properties",
             "requiredHeaderParameters": ["token"],
             "requiredQueryParameters": ["emailAddress"],
+            "requiredBodyData": [],
             "responseBody": [
               {
                   "name": "name",
