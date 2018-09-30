@@ -45,12 +45,14 @@
           "name": "emailAddress",
           "type": "string",
           "minLength": 5
-        }],      
+        }
+      ],      
       "requiredBodyData": {
         "items": [
           {
             "name": "id",
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           {
             "name": "quantity",
