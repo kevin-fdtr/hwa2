@@ -1,11 +1,13 @@
 {
-    "url": "/api",
-    "methods": [
-        {
-            "method": "get",
-            "name": "api endpoint list",
-            "headerKeyParameters": [],
-            "queryParameters": []
-        }
-    ]
+  "url": "/api",
+  "methods": [
+    {
+      "method": "get",
+      "name": "api endpoint list",
+      "requiredHeaderParameters": [],
+      "requiredQueryParameters": [],
+      "requiredBodyData": [],
+      "responseBody": []        
+    }
+  ]
 }

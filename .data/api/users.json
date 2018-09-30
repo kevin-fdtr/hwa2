@@ -4,8 +4,19 @@
         {
             "method": "get",
             "name": "get a user's properties",
-            "requiredHeaderParameters": ["token"],
-            "requiredQueryParameters": ["emailAddress"],
+            "requiredHeaderParameters": [
+              {
+                "name": "token",
+                "type": "string",
+                "minLength": 20
+              }
+            ],
+            "requiredQueryParameters": [
+              {
+                "name": "emailAddress",
+                "type": "string",
+                "minLength": 5
+              }],
             "requiredBodyData": [],
             "responseBody": [
               {
@@ -82,7 +93,13 @@
         {
             "method": "put",
             "name": "update a user",
-            "requiredHeaderParameters": ["token"],
+            "requiredHeaderParameters": [
+              {
+                "name": "token",
+                "type": "string",
+                "minLength": 20
+              }
+            ],
             "requiredQueryParameters": [],
             "requiredBodyData": [
                 {
@@ -130,8 +147,19 @@
         {
             "method": "delete",
             "name": "delete a user",
-            "requiredHeaderParameters": ["token"],
-            "requiredQueryParameters": ["emailAddress"],
+            "requiredHeaderParameters": [
+              {
+                "name": "token",
+                "type": "string",
+                "minLength": 20
+              }
+            ],
+            "requiredQueryParameters": [
+              {
+                "name": "emailAddress",
+                "type": "string",
+                "minLength": 5
+              }],
             "requiredBodyData": [],
             "responseBody": [
               {

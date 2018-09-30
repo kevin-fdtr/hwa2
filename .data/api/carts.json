@@ -4,9 +4,19 @@
     {
       "method": "get",
       "name": "list items in a cart",
-      "requiredHeaderParameters": ["token"],
-      "requiredQueryParameters": ["emailAddress"],
-      "requiredBodyData": [],
+      "requiredHeaderParameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "minLength": 20
+        }
+      ],
+      "requiredQueryParameters": [
+        {
+          "name": "emailAddress",
+          "type": "string",
+          "minLength": 5
+        }],      "requiredBodyData": [],
       "responseBody": {
         "items": [
           {
@@ -23,8 +33,19 @@
     {
       "method": "post",
       "name": "create cart with items or replace items in cart",
-      "requiredHeaderParameters": ["token"],
-      "requiredQueryParameters": ["emailAddress"],
+      "requiredHeaderParameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "minLength": 20
+        }
+      ],
+      "requiredQueryParameters": [
+        {
+          "name": "emailAddress",
+          "type": "string",
+          "minLength": 5
+        }],      
       "requiredBodyData": {
         "items": [
           {
@@ -54,8 +75,19 @@
     {
       "method": "delete",
       "name": "remove item(s) from a cart",
-      "requiredHeaderParameters": ["token"],
-      "requiredQueryParameters": ["emailAddress"],
+      "requiredHeaderParameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "minLength": 20
+        }
+      ],
+      "requiredQueryParameters": [
+        {
+          "name": "emailAddress",
+          "type": "string",
+          "minLength": 5
+        }],
       "requiredBodyData": {
         "items": [
           {

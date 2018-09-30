@@ -4,8 +4,19 @@
     {
       "method": "get",
       "name": "get the menu",
-      "requiredHeaderParameters": ["token"],
-      "requiredQueryParameters": ["emailAddress"],
+      "requiredHeaderParameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "minLength": 20
+        }
+      ],
+      "requiredQueryParameters": [
+        {
+          "name": "emailAddress",
+          "type": "string",
+          "minLength": 5
+        }],
       "optionalQueryParameters": [],
       "requiredBodyData": [],
       "optionalBodyData": [],
