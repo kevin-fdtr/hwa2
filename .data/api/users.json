@@ -34,25 +34,30 @@
             "requiredBodyData": [
                 {
                     "name": "name",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 {
                     "name": "emailAddress",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 5
                 },
                 {
                     "name": "password",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 6
                 },
                 {
                     "name": "streetAddress",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 }
             ],
             "optionalBodyData": [
                 {
                     "name": "allergies",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 }                
             ],
             "responseBody": [
@@ -82,21 +87,25 @@
             "requiredBodyData": [
                 {
                     "name": "emailAddress",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 5
                 }
             ],
             "optionalBodyData": [
                 {
                     "name": "name",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 {
                     "name": "streetAddress",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 },
                 {
                     "name": "allergies",
-                    "type": "string"
+                    "type": "string",
+                    "minLength": 1
                 }   
             ],            
             "responseBody": [
